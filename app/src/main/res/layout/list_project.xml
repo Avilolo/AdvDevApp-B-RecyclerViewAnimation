@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="24dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/project_IMG_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/project_IMG_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_launcher_background"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lay"
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/project_IMG_image"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/project_IMG_image1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/project_IMG_image2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/project_IMG_image3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/project_LBL_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@+id/lay"
+            android:textStyle="bold"
+            android:text="Hello World!" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/project_LBL_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:minLines="4"
+            android:maxLines="4"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/project_LBL_address"
+            android:text="Hello World!" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/project_BTN_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/project_LBL_content"
+            android:text="למידע נוסף"/>
+
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
