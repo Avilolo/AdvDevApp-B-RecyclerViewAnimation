@@ -62,6 +62,17 @@ public class DataManager {
                 .setParking(1)
                 .setRooms(3)
         );
+        for (int i = 0; i < 500; i++) {
+            properties.add(new Property()
+                    .addImage("img_2")
+                    .setPrice(i)
+                    .setContent("")
+                    .setAddress("יהושע 45, ירושלים")
+                    .setArea(i)
+                    .setBalcony(true)
+                    .setParking(i)
+                    .setRooms(i));
+        }
 
 
         return properties;

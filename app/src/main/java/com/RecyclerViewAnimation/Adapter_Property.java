@@ -3,6 +3,7 @@ package com.RecyclerViewAnimation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 
 
 public class Adapter_Property extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
 
     private ArrayList<Property> properties;
 
@@ -55,6 +57,10 @@ public class Adapter_Property extends RecyclerView.Adapter<RecyclerView.ViewHold
             String image = property.getImages().get(0);
             Imager.me().imageByDrawableName(mHolder.property_IMG_image, image);
 
+            // to make card change on scroll should be here
+            // if we dont load in onBindViewHolder the anim will be only when the RV pop up
+//            mHolder.itemView.startAnimation(AnimationUtils.loadAnimation(mHolder.itemView.getContext(), R.anim.rotate_in_animation));
+
             mHolder.property_LBL_address.setText(property.getAddress());
             mHolder.property_LBL_price.setText(property.getPrice() + "₪");
         } else if (holder instanceof ProjectViewHolder) {
@@ -64,6 +70,8 @@ public class Adapter_Property extends RecyclerView.Adapter<RecyclerView.ViewHold
             Imager.me().imageByDrawableName(mHolder.project_IMG_image2, property.getImages().get(2));
             Imager.me().imageByDrawableName(mHolder.project_IMG_image3, property.getImages().get(3));
             Imager.me().imageByDrawableName(mHolder.project_IMG_logo, property.getSellerIcon());
+
+
 
             mHolder.project_LBL_address.setText(property.getAddress());
             mHolder.project_LBL_content.setText(property.getContent());
@@ -117,6 +125,8 @@ public class Adapter_Property extends RecyclerView.Adapter<RecyclerView.ViewHold
             project_LBL_content = itemView.findViewById(R.id.project_LBL_content);
             project_BTN_action = itemView.findViewById(R.id.project_BTN_action);
         }
+
+
 
     }
 }
